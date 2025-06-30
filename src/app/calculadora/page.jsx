@@ -1,7 +1,7 @@
 'use client'
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Select } from "@/components/ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useState } from "react"
 
 export default function PaginaCalculadora() {
@@ -16,16 +16,15 @@ export default function PaginaCalculadora() {
                     <Input type="number" placeholder="Primeiro número" value={number1} onChange={(e) => setNumber1(e.target.value)} required />
 
 
-                    <Select value={operation} onValueChange={(e) => setOperation(e)} required>
-                        <SelectTrigger>
-                            <SelectValue placeholder="Operação" />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectItem value="soma">+</SelectItem>
-                            <SelectItem value="subtracao">-</SelectItem>
-                            <SelectItem value="multiplicacao">X</SelectItem>
-                            <SelectItem key=[3] value="divisao">/</SelectItem>
-                        </SelectContent>
+                    <Select value={operation} onValueChange={setOperation} required>
+                    <SelectTrigger className="w-full">
+                        <SelectValue placeholder="Selecione a operação" />
+                    </SelectTrigger>
+                    <SelectContent>
+                        <SelectItem key={1} value={'Somar'}>{'Somar'}</SelectItem>
+                        <SelectItem key={2} value={'Subtrair'}>{'Subtrair'}</SelectItem>
+                        <SelectItem key={3} value={'Multiplicar'}>{'Multiplicar'}</SelectItem>
+                    </SelectContent>
                     </Select>
 
                     <Input type="number" placeholder="Segundo número" value={number2} onChange={(e) => setNumber2(e.target.value)} required />
