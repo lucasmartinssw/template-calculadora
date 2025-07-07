@@ -1,5 +1,8 @@
+'use client'
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -9,7 +12,8 @@ export default function Home() {
           <h1 className="text-4xl font-bold">Bem vindo à Calculadora RPV</h1>
           <h2 className="text-xl font-bold">Projeto base Next.Js + Tailwind + shadcn + Integração Backend</h2>
           <p className="leading-relaxed-text-lg text-center"> Este projeto foi criado para demonstrar uma calculadora de operações matemáticas integrando frontend moderno com backend externo, utilizando as melhores práticas do ecossistema React/Next.Js</p>
-          <Button href="/calculadora">Ir para a calculadora</Button>
+          
+          <Button ><Link href="/calculadora"> Ir para a calculadora</Link></Button>
         </div>
       </div>
     </>
