@@ -9,7 +9,7 @@ export default function Home() {
           <h1 className="text-4xl font-bold">Bem vindo à Calculadora RPV</h1>
           <h2 className="text-xl font-bold">Projeto base Next.Js + Tailwind + shadcn + Integração Backend</h2>
           <p className="leading-relaxed-text-lg text-center"> Este projeto foi criado para demonstrar uma calculadora de operações matemáticas integrando frontend moderno com backend externo, utilizando as melhores práticas do ecossistema React/Next.Js</p>
-          <Button>Ir para a calculadora</Button>
+          <Button href="/calculadora">Ir para a calculadora</Button>
         </div>
       </div>
     </>
